@@ -1,0 +1,132 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+html,body{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-color: #333;
+}
+.shop-item{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:10px 0;
+    border:1px solid lightgray!important;
+    transition: .3s;
+    &:hover{
+        transform:scale(1.01);
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+
+        cursor: pointer;
+    }
+    >div{
+        flex:1;
+        text-align: center;
+    }
+    img{
+        width:200px;
+    }
+    .buy-button-holder button{
+        border:0;
+        background-color: rgb(34, 189, 55);
+        padding:10px 20px;
+        color:white;
+        font-weight:bold;
+        border-radius:5px;
+
+        box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+
+        cursor: pointer;
+
+        &:active{
+            background-color: rgb(34, 189, 189);
+            box-shadow: none;
+            
+        }
+    
+    }
+}
+
+.card{
+    margin-top:50px;
+}
+.card-header{
+    
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.card-body{
+    max-height: 700px;
+    overflow: scroll;
+}
+
+.cart-wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+    .card{
+        width: 600px;
+        max-height: 500px;
+        z-index:22;
+    }
+    
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 21;
+
+}
+.logo{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.cart-button-holder{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.quantity-button{ 
+
+    font-size: 20px!important;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
